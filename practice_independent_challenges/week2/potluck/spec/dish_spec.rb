@@ -8,5 +8,15 @@ describe Dish do
 
       expect(dish).to be_a Dish
     end
+    it 'has a name' do
+      dish = Dish.new('CousCous', :appetizer)
+
+      expect(dish.name).to eq 'CousCous'
+    end
+    it 'has a category' do
+      dish = Dish.new('CousCous', :appetizer)
+
+      expect(dish.category).to eq :appetizer
+    end
   end
 end
